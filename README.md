@@ -9,10 +9,12 @@ The goal of this project is to understand how variadic functions work in C
 and to build a small, working formatted-output engine from scratch, without
 implementing the original's internal buffering mechanism.
 
-The library exposes a single function:
+The library exposes three functions:
 
 ```c
 int ft_printf(char const *format, ...);
+int ft_putstr_mod(char *st, int fd);
+int print_mem(unsigned long mem);
 ```
 
 It parses the format string, reads the corresponding variadic arguments,

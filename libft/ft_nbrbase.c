@@ -6,7 +6,7 @@
 /*   By: danipere <danipere@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:43:13 by danipere          #+#    #+#             */
-/*   Updated: 2026/06/30 15:40:36 by danipere         ###   ########.fr       */
+/*   Updated: 2026/07/01 14:36:14 by danipere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ static int	nbrbase_len(long long nbr, int based)
 {
 	int	count;
 
+	if (!nbr)
+		return (1);
 	count = 0;
-	while (True)
+	while (nbr > 0)
 	{
 		nbr = nbr / based;
 		count++;
-		if (nbr < based)
-			break ;
 	}
-	return (count + 1);
+	return (count);
 }
 
 char	*ft_nbrbase(long long nbr, char *base)

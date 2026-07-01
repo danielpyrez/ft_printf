@@ -6,13 +6,14 @@
 /*   By: danipere <danipere@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 16:12:34 by danipere          #+#    #+#             */
-/*   Updated: 2026/06/30 15:58:52 by danipere         ###   ########.fr       */
+/*   Updated: 2026/07/01 13:43:24 by danipere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # define BASE_HEX "0123456789abcdef"
+# define BASE_TEN "0123456789"
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>

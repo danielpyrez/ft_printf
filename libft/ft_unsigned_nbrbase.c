@@ -6,7 +6,7 @@
 /*   By: danipere <danipere@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:43:13 by danipere          #+#    #+#             */
-/*   Updated: 2026/06/29 23:20:28 by danipere         ###   ########.fr       */
+/*   Updated: 2026/07/01 14:35:11 by danipere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ static int	nbrbase_len(unsigned long nbr, unsigned long based)
 {
 	int	count;
 
+	if (!nbr)
+		return (1);
 	count = 0;
-	while (True)
+	while (nbr > 0)
 	{
 		nbr = nbr / based;
 		count++;
-		if (nbr < based)
-			break ;
 	}
-	return (count + 1);
+	return (count);
 }
 
 char	*ft_unsigned_nbrbase(unsigned long nbr, char *base)

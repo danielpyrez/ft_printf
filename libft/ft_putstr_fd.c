@@ -6,7 +6,7 @@
 /*   By: danipere <danipere@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 02:23:02 by danipere          #+#    #+#             */
-/*   Updated: 2026/06/29 17:59:58 by danipere         ###   ########.fr       */
+/*   Updated: 2026/07/01 14:20:20 by danipere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 int	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	int		i;
+	char	*ptr;
+	char	*nul;
 
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	i = -1;
+	nul = "(null)";
+	if (!s)
+		ptr = nul;
+	else
+		ptr = s;
+	while (ptr[++i])
+		ft_putchar_fd(ptr[i], fd);
 	return (i);
 }
